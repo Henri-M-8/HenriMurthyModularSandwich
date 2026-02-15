@@ -12,9 +12,9 @@ class Cashier:
         total += float(input("how many pennies?: ")) * 0.01
         return total
 
-    def transaction_result(self, coins, cost):
+    def transaction_result(self, cost):
         """Return True when the payment is accepted, or False if money is insufficient.
-           Hint: use the output of process_coins() function for cost input"""
+           Calls process_coins() to get the amount inserted."""
         coins = self.process_coins()
         if coins >= cost:
             change = coins - cost
